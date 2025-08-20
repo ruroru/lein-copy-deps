@@ -44,14 +44,14 @@
 (defn- copy-deps-internal
   [project target-dir copy-strategy]
   (let [project (project/unmerge-profiles project [:dev :provided])
-        deps (->> (classpath/resolve-dependencies :dependencies project)
+        deps (->> (classpath/resolve-managed-dependencies :dependencies :managed-dependencies project)
                   (filter #(.exists ^File %)))]
     (doseq [file deps]
       (case copy-strategy
         :link (symlink-with-fallback file target-dir)
         :copy (copy file target-dir)
-        (copy file target-dir)))                            ; default to copy
-    (main/info "Copied" (count deps) "file(s) to:" (.toString (.normalize ^Path (.toPath ^File target-dir))))))
+        (copy file target-dir)))
+    (main/info "Copied" (count deps) "file(s) to:" (.toString (.normalize ^Path (.toAbsolutePath ^Path (.toPath ^File target-dir)))))))
 
 (defn copy-deps
   "Copies or symlinks project dependencies to a directory.
