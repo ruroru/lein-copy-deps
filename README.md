@@ -6,7 +6,7 @@ A leiningen plugin to fetch dependencies
 Add copy-deps to plugin list
 
 ```clojure
-[org.clojars.jj/copy-deps "1.0.0"]
+[org.clojars.jj/copy-deps "1.0.1"]
 ```
 
 ## Usage
