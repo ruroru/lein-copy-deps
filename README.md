@@ -12,15 +12,15 @@ Add copy-deps to plugin list
 ## Usage
 
 ```bash
-lein 
+lein copy-deps
 ```
 
 ### Configuration options
 
-| Option   | Descriptiom                                         | default value  | 
-|----------|-----------------------------------------------------|----------------|
-| path     | Path where dependencies will be placed              | `./target/lib` |
-| strategy | Copy strategy, supported option are :copy and :link | `:copy`        |
+| Option   | Descriptiom                                             | default value  | 
+|----------|---------------------------------------------------------|----------------|
+| path     | Path where dependencies will be placed                  | `./target/lib` |
+| strategy | Copy strategy, supported option are `:copy` and `:link` | `:copy`        |
 
 
 ## License
