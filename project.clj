@@ -11,4 +11,4 @@
                                     :password :env/clojars_pass}]]
 
   :plugins    [[org.clojars.jj/bump "1.0.4"]
-               [org.clojars.jj/bump-md "1.0.0"]])
+               [org.clojars.jj/bump-md "1.1.0"]])
