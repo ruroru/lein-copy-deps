@@ -1,4 +1,4 @@
-(defproject org.clojars.jj/copy-deps  "1.0.2"
+(defproject org.clojars.jj/copy-deps  "1.0.3-SNAPSHOT"
   :description "lein-copy-deps is a Leiningen plugin that copies all your project's dependencies to a single directory. It supports both hard copy and symlink"
   :url "https://github.com/ruroru/lein-copy-deps"
   :license {:name "EPL-2.0"
